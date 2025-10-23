@@ -1,0 +1,46 @@
+
+export const Paths = {
+    undefinedRoute: "*",
+    main: "/" || "",
+    accessDenied: "/access-denied",
+    notfound: "/page-not-found",
+    pathOnward: ":path?",
+    login: "/auth/login",
+    emailVerification: "/auth/login/confirm-email",
+    forgotPasswordEmailVerification: "/forgot-password/email-verification",
+    signup: "/signup",
+    forgotPassword: "/forgot-password",
+    changePassword: "/auth/login/forget-password",
+    dashboard: "/profile",
+    pattern: "/patterns",
+  
+    patternConfig: "/config",
+    patternTrain: "/train",
+    patternDeploy: "/deploy",
+    pattrenSqlTool: "/tools",
+  
+    patternCreateSpeechToText: "/create-speechtotext",
+    patternCreatePredictive: "/create-predictivepattern",
+    patternCreateRecommendation: "/create-recommendation",
+    patternCreateChatbot: "/create-chatbot",
+    patternCreateChatbotAgent: "/create-chatbotagent",
+    patternCreateFeatureExtractionAgent: "/create-feature-agent",
+    patternCreatePredictiveAgent: "/create-predictive-agent",
+    patternChatbot: "/chatbot",
+    patternFeatureExtraction: "/feature-extraction",
+    patternPredictive: "/predictive",
+    patternCreateLanguageTrans: "/create-languagetranslation",
+  
+    patternCreateForm: "/patterns/create/form",
+    xAgent: "/xAgents",
+    xAgentCreate: "/xAgents/create",
+    tutorial: "/tutorials",
+    help: "/help",
+  
+    workForceStrategy: "/work-force-strategy",
+    estimatedSavings: "/estimated-savings",
+    workForcePattrens: "/use-case-patterns",
+    llmFunctions: "/llm-function",
+    apiKey: "/api-key",
+  };
+  
