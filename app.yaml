@@ -1,0 +1,35 @@
+runtime: nodejs20
+
+handlers:
+  # Serve all static files with "/" removed from path
+  - url: /assets
+    static_dir: dist/assets
+    secure: always
+
+  # Serve favicon
+  - url: /favicon.ico
+    static_files: dist/favicon.ico
+    upload: dist/favicon.ico
+    secure: always
+
+  # Serve any other static files
+  - url: /(.+\.(js|css|png|jpg|jpeg|gif|svg|webp|ico|json|woff|woff2|ttf|eot))
+    static_files: dist/\1
+    upload: dist/.*\.(js|css|png|jpg|jpeg|gif|svg|webp|ico|json|woff|woff2|ttf|eot)
+    secure: always
+
+  # Serve index.html for all other routes (SPA routing)
+  - url: /.*
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always
+
+# Automatically scale based on traffic
+automatic_scaling:
+  min_instances: 0
+  max_instances: 10
+  target_cpu_utilization: 0.65
+
+env_variables:
+  NODE_ENV: 'production'
+
